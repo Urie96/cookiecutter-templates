@@ -1,0 +1,2 @@
+gen:
+    python gen.py

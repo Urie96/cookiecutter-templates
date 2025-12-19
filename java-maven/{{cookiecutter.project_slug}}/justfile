@@ -1,0 +1,14 @@
+artifactId := file_name(justfile_directory())
+groupID := "com.github.urie96"
+
+init:
+    mvn archetype:generate \
+    -DgroupId={{ groupID }} \
+    -DartifactId={{ artifactId }}
+    mv -i ./{{ artifactId }}/* . && rm -rf {{ artifactId }}
+
+run:
+    mvn compile exec:java -Dexec.mainClass="{{ groupID }}.App"
+
+compile:
+    mvn compile -DskipTests

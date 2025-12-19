@@ -1,0 +1,22 @@
+alias u := upload
+alias b := build
+
+build:
+    cargo build --release
+
+upload:
+    cargo run
+
+example:
+    esp-generate --chip esp32c6 example
+
+_init:
+    #!/usr/bin/env bash
+    set -euxo pipefail
+
+    project_name="$(basename "$PWD")"
+    esp-generate --chip esp32c6 "$project_name"
+    mv "$project_name"/* "$project_name"/.* .
+    rmdir "$project_name"
+    # 添加rust-analyzer
+    awk '/^components = \[/ { sub(/\]/, ", \"rust-analyzer\"]") } 1' rust-toolchain.toml > tmp && mv tmp rust-toolchain.toml

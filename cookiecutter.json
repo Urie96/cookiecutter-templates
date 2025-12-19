@@ -1,0 +1,49 @@
+{
+  "templates": {
+    "arduino": {
+      "path": "./arduino/"
+    },
+    "bun": {
+      "path": "./bun/"
+    },
+    "c-cpp": {
+      "path": "./c-cpp/"
+    },
+    "empty": {
+      "path": "./empty/"
+    },
+    "esp-idf": {
+      "path": "./esp-idf/"
+    },
+    "esp-rust": {
+      "path": "./esp-rust/"
+    },
+    "go": {
+      "path": "./go/"
+    },
+    "java-maven": {
+      "path": "./java-maven/"
+    },
+    "new": {
+      "path": "./new/"
+    },
+    "node": {
+      "path": "./node/"
+    },
+    "platformio": {
+      "path": "./platformio/"
+    },
+    "python": {
+      "path": "./python/"
+    },
+    "rust": {
+      "path": "./rust/"
+    },
+    "test": {
+      "path": "./test/"
+    },
+    "zephyr": {
+      "path": "./zephyr/"
+    }
+  }
+}

@@ -1,0 +1,198 @@
+[music-assistant]
+github = "urie96/music-assistant-server"
+branch = "stable"
+
+[scrcpy-darwin-arm64]
+github_release = "Genymobile/scrcpy"
+url            = "https://github.com/Genymobile/scrcpy/releases/download/<version>/scrcpy-macos-aarch64-<version>.tar.gz"
+
+[kitten-linux-arm64]
+github_release = "kovidgoyal/kitty"
+url            = "https://github.com/kovidgoyal/kitty/releases/download/<version>/kitten-linux-arm64"
+
+[docker-music-assistant]
+image = "ghcr.io/urie96/server:2.6.3"
+
+[NeteaseCloudMusicApi]
+npm       = "NeteaseCloudMusicApi"
+hash_path = "NeteaseCloudMusicApi"
+
+[gemini-cli-bin]
+github_release = "google-gemini/gemini-cli"
+url            = "https://github.com/google-gemini/gemini-cli/releases/download/<version>/gemini.js"
+
+[docker-homebridge]
+image = "homebridge/homebridge"
+
+[claude-code]
+npm       = "@anthropic-ai/claude-code"
+hash_path = "claude-code"
+
+[flatnvim]
+github    = "urie96/flatnvim"
+hash_path = "flatnvim"
+
+[hass-sonofflan]
+github_tag = "AlexxIT/SonoffLAN"
+
+[docker-xiaozhi-server]
+image = "ghcr.nju.edu.cn/xinnan-tech/xiaozhi-esp32-server:server_latest"
+
+[hass-volc-tts]
+github = "urie96/hass-volcengine-tts"
+
+[hass-fun-asr]
+github = "urie96/home-assistant-fun-asr"
+
+[sherpa-onnx]
+github_release = "k2-fsa/sherpa-onnx"
+url            = "https://github.com/k2-fsa/sherpa-onnx/releases/download/<version>/sherpa-onnx-<version>-linux-x64-shared.tar.bz2"
+
+[sherpa-onnx-paraformer]
+github = "k2-fsa/sherpa-onnx"
+rev    = "asr-models"
+url    = "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-paraformer-zh-2023-09-14.tar.bz2"
+
+# [hass-xiaozhi-mcp.github_tag]
+# repo = "mac8005/xiaozhi-mcp-ha"
+
+[python-mcp-proxy]
+github = "sparfenyuk/mcp-proxy"
+branch = "v0.5.1"
+
+[hass-node-red]
+github_tag = "zachowj/hass-node-red"
+
+[flake-compat]
+github = "edolstra/flake-compat"
+
+[dream2nix]
+github = "nix-community/dream2nix"
+
+[gitignore-nix]
+github = "hercules-ci/gitignore.nix"
+
+[nix-homebrew]
+github = "zhaofengli-wip/nix-homebrew"
+
+[nix-darwin]
+github = "nix-darwin/nix-darwin"
+branch = "nix-darwin-25.05"
+
+[home-manager]
+github = "nix-community/home-manager"
+
+[nixpkgs]
+github = "NixOS/nixpkgs"
+
+[sops-nix]
+github = "Mic92/sops-nix"
+
+[docker-esphome]
+image = "esphome/esphome"
+
+[docker-node-red]
+image = "nodered/node-red"
+
+[docker-mtranserver]
+image = "xxnuo/mtranserver:3.0.1-beta2-zh"
+
+[respeaker-2mic-overlay-dts]
+github = "Seeed-Studio/seeed-linux-dtoverlays"
+url    = "https://github.com/Seeed-Studio/seeed-linux-dtoverlays/raw/<rev>/overlays/rpi/respeaker-2mic-v2_0-overlay.dts"
+
+[nixpkgs-latest]
+github = "NixOS/nixpkgs"
+branch = "nixos-unstable"
+
+[love-yue]
+github    = "urie96/Love"
+hash_path = "web.love-yue"
+
+[ostui]
+hash_path = "ostui"
+github    = "urie96/ostui"
+branch    = "urie"
+
+[ncmdump-go]
+git       = "https://git.taurusxin.com/taurusxin/ncmdump-go.git"
+url       = "https://git.taurusxin.com/taurusxin/ncmdump-go/archive/<rev>.tar.gz"
+hash_path = "ncmdump"
+
+[woff2otf]
+github = "hanikesn/woff2otf"
+
+[tokyonight-night-tm]
+github_tag = "folke/tokyonight.nvim"
+url        = "https://github.com/folke/tokyonight.nvim/raw/<rev>/extras/sublime/tokyonight_night.tmTheme"
+
+[dracula-tm]
+github_tag = "dracula/sublime"
+url        = "https://github.com/dracula/sublime/raw/refs/tags/<version>/Dracula.tmTheme"
+
+[nushell-syntax]
+github = "kurokirasama/nushell_sublime_syntax"
+url    = "https://github.com/kurokirasama/nushell_sublime_syntax/raw/<rev>/nushell.sublime-syntax"
+
+[justfile-syntax]
+github = "nk9/just_sublime"
+url    = "https://github.com/nk9/just_sublime/raw/<rev>/Syntax/Just.sublime-syntax"
+
+[homebrew-core]
+github = "homebrew/homebrew-core"
+
+[homebrew-cask]
+github = "homebrew/homebrew-cask"
+
+[hammerspoon-spoons]
+github = "Hammerspoon/Spoons"
+
+[rime-ice]
+github = "iDvel/rime-ice"
+branch = "2024.12.12"
+
+[yazi-official-plugins]
+# pinned = true
+github = "yazi-rs/plugins"
+
+[yamb-yazi]
+pinned = true
+github = "h-hg/yamb.yazi"
+rev    = "22af0033be18eead7b04c2768767d38ccfbaa05b"
+
+[sing-box]
+hash_path = "sing-box-1_12"
+github    = "SagerNet/sing-box"
+branch    = "v1.12.0-alpha.11"
+
+[aria-ng]
+github_release = "mayswind/AriaNg"
+url            = "https://github.com/mayswind/AriaNg/releases/download/<version>/AriaNg-<version>.zip"
+
+[yacd]
+github_release = "haishanh/yacd"
+url            = "https://github.com/haishanh/yacd/releases/download/<version>/yacd.tar.xz"
+
+[hackbook-web]
+github = "urie96/hackbook-web"
+
+[hackbook-server]
+github = "urie96/hackbook-rust"
+
+[firefox-darwin-overlay]
+github = "bandithedoge/nixpkgs-firefox-darwin"
+
+[vscode-extensions-overlay]
+github = "nix-community/nix-vscode-extensions"
+
+[mcp-hub]
+github_tag = "ravitemer/mcp-hub"
+hash_path  = "mcp-hub"
+
+[keywrap]
+github    = "urie96/keywrap"
+hash_path = "keywrap"
+
+[nixos-hardware]
+github = "NixOS/nixos-hardware"
+pinned = true

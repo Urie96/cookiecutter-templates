@@ -1,0 +1,25 @@
+alias c := clean
+alias b := build
+alias u := upload
+
+clean:
+    pio run -t clean
+
+build:
+    pio run
+
+upload:
+    pio run -t upload
+
+lsp:
+    pio run -t compiledb
+    # pio init --ide vim
+    # curl -L -s https://github.com/ironlungx/nvim-pio/raw/refs/heads/main/conv.py | python
+    # rm .ccls compile_commands.json.bak
+
+init:
+    @echo "目前的配置是："
+    @cat ./platformio.ini
+    @read -p "是否继续？（回车确认，Ctrl-C取消）"
+    just build
+    just lsp

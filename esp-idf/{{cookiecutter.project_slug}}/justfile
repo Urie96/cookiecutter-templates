@@ -1,0 +1,19 @@
+alias b := build
+alias u := upload
+alias c := clean
+
+init:
+    cp -r --no-preserve=mode $IDF_PATH/examples/get-started/hello_world/* .
+    idf.py set-target esp32c6
+
+build:
+    idf.py build
+
+upload:
+    idf.py flash
+
+clean:
+    idf.py clean
+
+repl:
+    idf.py monitor

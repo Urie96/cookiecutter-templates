@@ -1,0 +1,8 @@
+alias b := build
+alias u := upload
+
+build:
+    arduino-cli compile main
+
+upload:
+    arduino-cli upload main
