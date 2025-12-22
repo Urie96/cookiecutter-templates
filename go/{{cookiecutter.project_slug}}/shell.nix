@@ -1,9 +1,9 @@
 let
-  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/archive/fd487183437963a59ba763c0cc4f27e3447dd6dd.tar.gz";
+  sources = import ./nix/sources.nix;
 
-  goVersion = 22; # Change this to update the whole stack
+  goVersion = 25; # Change this to update the whole stack
 
-  pkgs = import nixpkgs {
+  pkgs = import sources.nixpkgs {
     config = { };
     overlays = [
       (final: prev: {

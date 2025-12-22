@@ -400,7 +400,7 @@ def dict_to_namespace(data):
 
 
 def get_config() -> Mapping[str, Spec]:
-    config_path = "nix/config.toml"
+    config_path = "config.toml"
     with open(config_path, "rb") as f:
         specMap = {}
         for k, v in tomllib.load(f).items():
@@ -499,22 +499,26 @@ def update_by_spec(name: str, spec: Spec):
 
 class SourcesJson:
     def __init__(self):
-        self.path = "nix/sources.json"
-        with open(self.path, "r", encoding="utf-8") as f:
-            data: Dict[str, Dict[str, str]] = json.load(f)
-            self.data = data
+        self.path = "sources.json"
+        self.data = {}
+        if not os.path.exists(self.path):
+            self.data = {}
+        else:
+            with open(self.path, "r", encoding="utf-8") as f:
+                data: Dict[str, Dict[str, str]] = json.load(f)
+                self.data = data
 
     def __enter__(self):
         return self.data
 
     def __exit__(self, exc_type, exc_value, traceback):
         with open(self.path, "w", encoding="utf-8") as f:
-            json.dump(self.data, f, indent=4, sort_keys=True)
+            json.dump(self.data, f, indent=2, sort_keys=True)
 
 
 def sync_all(config: Mapping[str, Spec]):
     with SourcesJson() as sources:
-        for name in sources.keys():
+        for name in list(sources.keys()):
             if name not in config:
                 print(red(f"Deleting [{name}]", bright=True))
                 del sources[name]

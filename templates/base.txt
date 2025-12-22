@@ -1,3 +1,0 @@
-hello in base.txt
-
-"{{cookiecutter.project_slug}}"
