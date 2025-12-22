@@ -15,6 +15,8 @@ let
       pname = src.name;
       version = src.version;
       src = src;
+      pyproject = true;
+      build-system = [ pythonPackage.setuptools ];
       dependencies = with pythonPackage; [
         numpy
         pillow
