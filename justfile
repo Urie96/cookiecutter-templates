@@ -4,7 +4,7 @@ gen:
     python gen.py
 
 fetch pkg="":
-    @cd templates && just select-sources "{{ pkg }}" | xargs -0 -I {} nivv "{}"
+    @cd templates && just select-sources "{{ pkg }}" | xargs -0 -I {} ./nivv "{}"
 
 [private]
 select-sources pkg="":
