@@ -1,8 +1,8 @@
 let
 
   sources = import ./nix/sources.nix;
-  arduino-nix = builtins.getFlake "${sources.arduino-nix}/${sources.arduino-nix.version}";
-  arduino-index = import sources.arduino-index;
+  arduino-nix = builtins.getFlake "github:bouk/arduino-nix/${sources.arduino-nix.version}";
+  arduino-index = sources.arduino-indexes;
 
   pkgs = import sources.nixpkgs {
     config = { };
