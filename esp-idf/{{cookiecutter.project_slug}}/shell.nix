@@ -2,7 +2,7 @@ let
   sources = import ./nix/sources.nix;
 
   pkgs = import sources.nixpkgs {
-    config = { };
+    config.permittedInsecurePackages = [ "python3.13-ecdsa-0.19.1" ];
     overlays = [ (import "${sources.nixpkgs-esp-dev}/overlay.nix") ];
   };
 
@@ -33,7 +33,7 @@ let
   };
 in
 
-pkgs.mkShell {
+pkgs.mkShellNoCC {
   buildInputs = [
     esp-idf-full # esp32
     # esp8266-rtos-sdk # esp8266
