@@ -1,0 +1,17 @@
+set shell := ["bash", "-c"]
+
+default:
+    @just --list
+
+build:
+    @mkdir -p build
+    cd build && cmake .. && make
+
+clean:
+    rm -rf build
+
+run: build
+    ./build/bin/{{cookiecutter.project_slug}}
+
+test: build
+    ctest --test-dir build
