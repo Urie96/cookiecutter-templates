@@ -6,17 +6,33 @@ let
     overlays = [ ];
   };
 
-  customPython = pkgs.python3.withPackages (p: with p; [ pip ]);
+  python = pkgs.python3;
 in
 
 pkgs.mkShellNoCC {
   venvDir = ".venv";
-  packages =
-    (with customPython.pkgs; [
+  packages = (
+    with python.pkgs;
+    [
       venvShellHook
-    ])
-    ++ (with pkgs; [
-      customPython
-      uv
-    ]);
+      pip
+    ]
+  );
+
+  postShellHook = ''
+    venvVersionWarn() {
+    	local venvVersion
+    	venvVersion="$("$venvDir/bin/python" -c 'import platform; print(platform.python_version())')"
+
+    	[[ "$venvVersion" == "${python.version}" ]] && return
+
+    	cat <<EOF
+    Warning: Python version mismatch: [$venvVersion (venv)] != [${python.version}]
+             Delete '$venvDir' and reload to rebuild for version ${python.version}
+    EOF
+    }
+
+    venvVersionWarn
+  '';
+
 }
