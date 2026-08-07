@@ -1,5 +1,8 @@
 {
   "templates": {
+    "android": {
+      "path": "./android"
+    },
     "arduino": {
       "path": "./arduino/"
     },
